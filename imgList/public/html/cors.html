@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入jq插件 -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="cors()" type="button">提交</button>
+    <div id="box"></div>
+    <script>
+        function cors(){
+            $.get('http://localhost:3000/cors',{},(data)=>{
+                console.log(data);
+                $("#box").get(0).innerHTML = data;
+            })
+        }
+    </script>
+</body>
+</html>

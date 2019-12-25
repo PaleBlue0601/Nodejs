@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>餐厅后台管理系统</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/add_updata.css">
+    <!-- 引入外部文件 -->
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/tools.js"></script>
+</head>
+<body>
+    <!-- 主要页面 -->
+    <div id="main">
+        <h1>餐厅后台管理</h1>
+        <div id="AddQuery">
+            <button type="button" class="btn" id="bt_add">添加</button>
+            <button type="button" onclick="remove()" class="btn" id="bt_delete">删除</button>
+            <div id="find">
+                <label>关键字：</label><input id="fd_key" type="text" />
+                <button type="button" class="btn" id="bt_find">查询</button>
+            </div>
+        </div>
+        <div id="table-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>选中</th>
+                        <th>#</th>
+                        <th>名称</th>
+                        <th>价格</th>
+                        <th>描述</th>
+                        <th>类别</th>
+                        <th>类别ID</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="list in lists" :key="list.id">
+                        <th class="check-box"><input type="checkbox"/></th>
+                        <th>{{list.id}}</th>
+                        <th>{{list.name}}</th>
+                        <th>{{list.price}}</th>
+                        <th>{{list.desc}}</th>
+                        <th>{{list.typename}}</th>
+                        <th>{{list.typeid}}</th>
+                        <th>
+                            <button type="button" v-on:click="showUpdata(list._id)" class="btn bt_modify">修改</button>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tail">
+            <button class="btn" v-on:click="left" type="button">上一页</button>
+            <span id="page">{{inPage}}/{{pageLen}}</span>
+            <button class="btn" v-on:click="right" type="button">下一页</button>
+        </div>
+    </div>
+    <!-- 添加 -->
+    <div id="add">
+        <h1>添加菜品</h1>
+        <div class="close"></div>
+        <div class="tx_input"><label>名称：</label><input class="name" type="text" /></div>
+        <div class="tx_input"><label>价格：</label><input class="price" type="text" /></div>
+        <div class="tx_input"><label>描述：</label><input class="desc" type="text" /></div>
+        <div class="tx_input"><label>类型：</label><input class="typename" type="text" /></div>
+        <div class="tx_input"><label>类型ID：</label><input class="typeid" type="text" /></div>
+        <div class="btn-box"><button type="button" class="btn send">添加</button></div>
+    </div>
+    <!-- 修改 -->
+    <div id="updata">
+        <h1>修改菜品信息</h1>
+        <div class="close"></div>
+        <div class="tx_input"><label>名称：</label><input class="name" type="text" /></div>
+        <div class="tx_input"><label>价格：</label><input class="price" type="text" /></div>
+        <div class="tx_input"><label>描述：</label><input class="desc" type="text" /></div>
+        <div class="tx_input"><label>类型：</label><input class="typename" type="text" /></div>
+        <div class="tx_input"><label>类型ID：</label><input class="typeid" type="text" /></div>
+        <div class="btn-box"><button type="button" class="btn send" >修改</button></div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/add.js"></script>
+    <script src="js/find.js"></script>
+    <script src="js/remove.js"></script>
+    <script src="js/updata.js"></script>
+</body>
+</html>

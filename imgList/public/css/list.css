@@ -1,0 +1,126 @@
+/* 全局设置 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 标题 */
+h1{
+    text-align: center;
+    padding: 25px;
+}
+/* 添加模块 */
+.add{
+    width: 600px;
+    height: 250px;
+    margin: 0px auto;
+}
+.form,
+.label-box,
+.file-box,
+.btn-box{
+    position: relative;
+    margin: 0 auto;
+}
+.label-box{
+    width: 300px;
+    padding: 10px;
+    font-size: 1.2em;
+}
+.label-box #name{
+    height: 21px;
+}
+.file-box{
+    width: 400px;
+    height: 150px;
+    border: 2px solid #cccccc;
+}
+.file-box #file{
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 99;
+}
+.file-box label{
+    position: absolute;
+    font-size: 1.2em;
+    color: #d4d4d4;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 400px;
+    /* 处理字符串过长 */
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.btn-box{
+    width: 80px;
+    padding: 10px;
+}
+.btn-box #btn{
+    width: 80px;
+    height: 30px;
+}
+/* 主要内容 */
+#main{
+    float: left;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    margin: 20px 0px;
+    width: 1000px;
+    height: 100%;
+}
+/* 列表 */
+ul,li{
+    position: relative;
+    list-style: none;
+    height: 100%;
+    float: left;
+}
+
+li .img{
+    padding: 10px 25px;
+}
+
+.img img{
+    width: 200px;
+    height: 200px;
+}
+
+li .name{
+    display: block;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+}
+
+li .close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../img/close.png);
+    background-size: 28px 28px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: none;
+}
+/* 信息提示框 */
+#msgDiv{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    width: 250px;
+    height: 120px;
+    line-height: 100px;
+    font-size: 1.4em;
+    text-align: center;
+    border: 1px solid black;
+    background: #f5f3f3;
+    display: none;
+    z-index: 999;
+}

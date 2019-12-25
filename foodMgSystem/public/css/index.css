@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    outline: none;
+}
+
+button{
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+/* 设置全局按钮属性 */
+.btn{
+    border-radius: 5px;
+    background: rgb(177, 184, 185);
+    color: #ffffff;
+    cursor: pointer;
+}
+.btn:active{
+    background: rgb(0, 0, 0);
+}
+
+#main{
+    position: relative;
+    margin: 200px auto;
+    width: 1000px;
+    border: 1 solid #ffffff;
+}
+
+#main h1{
+    text-align: center;
+    height: 75px;
+}
+
+#main #AddQuery{
+    width: 800px;
+    height: 30px;
+    margin: 20px auto;
+}
+
+#bt_add,#bt_find,#bt_delete{
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+}
+
+#AddQuery #find{
+    float: right;
+}
+
+#find input{
+    width: 115px;
+    padding-left: 5px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    outline: none;
+}
+
+#table-box{
+    border: 1px solid white;
+    padding: 50px;
+}
+
+#table-box table{
+    width: 900px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    min-width: 100%;
+}
+
+table th{
+    border: 1px solid #ddd;
+    min-width: 119px; 
+    width: 119px;
+    height: 20px;
+    padding: 8px;
+    text-align: left;
+}
+
+#table-box table th:nth-child(1){
+    min-width: 40px; 
+}
+
+.check-box input{
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+#table-box table th:nth-child(2){
+    min-width: 10px; 
+}
+
+#table-box table th:nth-child(5){
+    max-width: 119px; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+#table-box thead th{
+    border-bottom: 2px solid #ddd;
+}
+
+#table-box tbody th{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#table-box .bt_modify{
+    display: block;
+    margin: 0px auto;
+    width: 60px;
+}
+
+#tail{
+    position: absolute;
+    bottom: 5px;
+    right: 50px;
+}
+
+#tail .btn{
+    width: 60px;
+}

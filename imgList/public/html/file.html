@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入jq插件 -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <title>上传文件</title>
+</head>
+<body>
+    <input type="file" name="" id="file">
+    <button onclick="doUpload()">上传</button>
+    <img width="400px" height="400px" src="" alt="">
+    <script>
+        function doUpload(){
+            let file = $('#file').get(0).files[0];
+            let formdata = new FormData(); //创建空的formdata对象
+            formdata.append("img", file); //key:img
+            $.ajax({
+                url:'http://localhost:3000/file/upload',
+                type:'POST',
+                data:formdata,
+                processData: false, //必写
+                contentType: false, //必写
+                success:(data)=>{
+                    console.log(data);
+                    if(data.err == 1){
+                        let url = data.img
+                        url = url.replace(/\\/g,"/");
+                        $('img').attr("src", `http://localhost:3000/${url}`); //拼接路径
+                    } else {
+                        alert(data.msg);
+                    } 
+                }
+            })
+        }
+    </script>
+</body>
+</html>

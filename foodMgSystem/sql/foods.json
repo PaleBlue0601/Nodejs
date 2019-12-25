@@ -1,0 +1,6 @@
+{"_id":{"$oid":"5dde708513a6ec13b44d98bc"},"name":"千层蛋糕","price":"120","desc":"由多层酥皮夹以芝士组合而成，Mascarponecheese、黄油、低筋粉、高筋粉、鸡蛋混合其中。","typename":"甜点","typeid":"005","img":"","__v":0}
+{"_id":{"$oid":"5ddf6fade431ae3d80daa509"},"name":"小炒肉","price":"24","desc":"香气诱人","typename":"正餐","typeid":"002","img":"","__v":0}
+{"_id":{"$oid":"5ddf7350bdbba43ebcb20345"},"name":"圣女果","price":"20","desc":"清甜可口","typename":"水果","typeid":"004","img":"","__v":0}
+{"_id":{"$oid":"5ddf7369bdbba43ebcb20346"},"name":"辣椒炒肉","price":"12","desc":"又辣又香","typename":"正餐","typeid":"002","img":"","__v":0}
+{"_id":{"$oid":"5ddfd70b258af033446072f8"},"name":"番茄炒蛋","price":"10","desc":"香香甜甜","typename":"正餐","typeid":"002","img":"","__v":0}
+{"_id":{"$oid":"5de097ca68339d1c705f4861"},"name":"腐竹炒肉","price":"12","desc":"腐竹炒肉是一道色香味俱全的地方名菜","typename":"粤菜","typeid":"002","img":"","__v":0}
